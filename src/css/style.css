@@ -14,6 +14,8 @@ body {
     align-items: center;
     min-height: 100vh;
     gap: 80px;
+    padding: 20px;
+    flex-wrap: wrap; /* ensures responsiveness */
 }
 
 /* Animation pane */
@@ -28,17 +30,20 @@ body {
     height: 100%;
     background-image: url('../images/home-phones.png');
     background-size: cover;
+    background-position: center;
     position: relative;
 }
 
+/* Animated screen inside the phone */
 .box-changeimage {
     position: absolute;
-    width: 250px;
-    height: 541px;
-    top: 50px;
-    left: 107px; /* Adjust so it sits on the phone screen */
+    top: 9%;       /* relative to phone */
+    left: 13%;     /* relative to phone */
+    width: 74%;    /* relative to phone */
+    height: 82%;   /* relative to phone */
     background-image: url('../images/screenshot1.png');
     background-size: cover;
+    background-position: center;
     animation: imageChange 20s infinite;
 }
 
@@ -55,8 +60,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
+/* Inner panel */
 .panel-inner {
     display: flex;
     flex-direction: column;
@@ -80,6 +87,7 @@ body {
 .watch-buttons {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .role-btn {
@@ -107,6 +115,7 @@ body {
     display: flex;
     gap: 15px;
     margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .social-buttons a {
@@ -131,19 +140,14 @@ body {
 
     .animation-pane {
         width: 300px;
-        height: 400px;
+        height: 410px;
     }
 
     .box-changeimage {
-        width: 150px;
-        height: 300px;
-        top: 40px;
-        left: 75px;
-    }
-
-    .watch-buttons {
-        flex-direction: column;
-        gap: 15px;
+        top: 9%;
+        left: 13%;
+        width: 74%;
+        height: 82%;
     }
 
     .role-btn {
